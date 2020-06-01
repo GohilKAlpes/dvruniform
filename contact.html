@@ -4,7 +4,7 @@
 <title>contact</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="Little Closet template">
+<meta name="description" content="DVR">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">
 <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -46,7 +46,7 @@
 			  aria-label="Toggle navigation"><span class="white-text"><i class="fa fa-bars" aria-hidden="true" style="color: #2fce98;"></i></span></button>
 		  
 			<!-- Collapsible content -->
-			<div class="collapse navbar-collapse" id="navbarSupportedContent41">
+			<div class="collapse navbar-collapse bordern" id="navbarSupportedContent41">
 		  
 			  <!-- Links -->
 			  <ul class="navbar-nav mr-auto">
@@ -61,6 +61,9 @@
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="contact.html">CONTACT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="tel:+91 9870155394">Phone No: +91 9870155394</a>
 				</li>
 			  </ul>
 			  <!-- Links -->
@@ -92,25 +95,26 @@
                 <div class="col-12 col-md-8">
                     <h4 class="text-center">Contact Form</h4>
                     <div>
-                        <form>
+                        <form method="post" autocomplete="off" name="google-sheet">
                             <div class="input-group mb-4">
                               <span class="fontIcon"><i class="fa fa-user" aria-hidden="true"></i></span>
-                              <input id="name" type="text" class="form-control" name="name" placeholder="Name">
+                              <input id="name" type="text" class="form-control" name="name" placeholder="Name" required>
                             </div>
                             <div class="input-group mb-4">
                               <span class="fontIcon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
-                              <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+                              <input id="email" type="text" class="form-control" name="email" placeholder="Email" required>
                             </div>
                             <div class="input-group mb-4">
                                 <span class="fontIcon"><i class="fa fa-phone-square" aria-hidden="true"></i></span>
-                                <input id="phone" type="number" class="form-control" name="phone" placeholder="Phone Number">
+                                <input id="phone" type="number" class="form-control" name="phone" placeholder="Phone Number" required>
                             </div>
                             <div class="input-group mb-4">
                                 <span class="fontIcon"><i class="fa fa-home" aria-hidden="true"></i></span>
                                 <textarea id="message" type="textarea" class="form-control" name="message" placeholder="Message"></textarea>
                                 <!-- <input id="message" type="textarea" class="form-control" name="message" placeholder="Message"> -->
                             </div>
-                            <button class="SEMESS" type="button">SEND MESSAGE</button>
+								<input type="submit" name="submit" class="SEMESS" value="SEND MESSAGE" />
+								<!-- <button class="SEMESS" type="button">SEND MESSAGE</button> -->
                         </form>
                     </div>
 				</div>
@@ -216,7 +220,7 @@
 					<div class="row">
 						<div class="col">
 							<div class="footer_bar_content d-flex flex-md-row flex-column align-items-center justify-content-center">
-								<div class="copyright order-md-1 order-2"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+								<div class="copyright order-md-1 order-2">
 									Copyright &copy;All rights reserved 
 								</div>
 							</div>
@@ -259,5 +263,16 @@ function topFunction() {
 	document.documentElement.scrollTop = 0;
 }
 </script>
+<script>
+	const scriptURL = 'https://script.google.com/macros/s/AKfycbx_r2CY4dReumJ3-iPW5qFo7-MuIBFmCyYWbtRO3RTNZQNTbJ0/exec'
+	const form = document.forms['google-sheet']
+  
+	form.addEventListener('submit', e => {
+	  e.preventDefault()
+	  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+		.then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+		.catch(error => console.error('Error!', error.message))
+	})
+  </script>
 </body>
 </html>

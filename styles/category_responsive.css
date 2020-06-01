@@ -350,4 +350,8 @@
 		border: 1px solid #2fce98;
 		border-radius: 5px;
 	}
+	.bordern {
+		border-top: 1px solid #2fce98;
+		margin-top: 10px;
+	}
 }

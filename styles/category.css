@@ -1238,17 +1238,18 @@ section
 	display: none;
 }
 .NavNewMobil .navbar {
-	padding: 15px 15px;
+	padding: 15px 0px;
 }
 .NavNewMobil .dvrlogo {
 	font-size: 24px;
 	font-weight: bold;
 	color: #2fce98;
+	padding-left: 20px;
 }
 .NavNewMobil .navbar-nav li a {
     font-size: 14px;
     color: #2e2e2e;
-    font-weight: 400;
+    font-weight: 500;
     padding: 5px 0;;
 }
 .NavNewMobil .navbar-nav {
@@ -1315,7 +1316,7 @@ section
 	right: 10px;
 	z-index: 99;
 	border: none;
-	color: #fff;
+	color: #000;
 	background: #2fce98;
 	cursor: pointer;
 	padding: 10px;
@@ -1324,8 +1325,8 @@ section
 }
 #myBtn:hover {
 	background: #2fce98;
-	color: #6d6d6d;
-	border: 1px solid #6d6d6d;
+	color: #000;
+	border: 1px solid #2fce98;
 }
 .avtivelicolor {
 	color: #2fce98;

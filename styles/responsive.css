@@ -253,6 +253,9 @@
 
 @media only screen and (max-width: 575px)
 {
+	.googlemap {
+		width: 100%;
+	}
 	.googlemap iframe {
 		width: 100%;
 	}
@@ -315,6 +318,9 @@
 		max-width: 350px;
 		margin-left: auto;
 		margin-right: auto;
+	}
+	.product_image {
+		height: 230px !important;
 	}
 	.home_item_large .product_image
 	{
@@ -427,8 +433,11 @@
 	.displaymobile {
 		display: block;
 	}
+	.displaymobile {
+		margin-right: 15px;
+	}
 	.getus {
-		font-size: 30px;
+		font-size: 27px;
 	}
 	.termsmain {
 		font-size: 30px;
@@ -459,6 +468,15 @@
 		width: 30px;
 		height: 30px;
 		border: solid 2px #2fce98;
+	}
+	.bordern {
+		border-top: 1px solid #2fce98;
+		margin-top: 10px;
+	}
+}
+@media only screen and (min-width: 320px) and (max-width: 410px) {
+	.mobpadi {
+		padding: 20px 0;
 	}
 }
 
